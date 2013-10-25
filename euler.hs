@@ -1,3 +1,4 @@
+import Data.List
 euler1 1000 ans=ans
 euler1 n ans|n `rem` 3==0=euler1 (n+1) (ans+n)
             |n `rem` 5==0=euler1 (n+1) (ans+n)
@@ -64,7 +65,7 @@ neuler10=sum(euler10 [2..2000000] [])
 ----------------------------------------------------------------------------------
 trian n=(n*(n+1) `div` 2):trian (n+1)
 
-euler12 n i|(countfact n)>500=n
+euler12 n i|(countfact n)>499=n
            |otherwise= euler12 (n+i) (i+1)
 
 countfact n =if (floor(sqrt(fromIntegral n))^2==n) then (p-1) else p
@@ -80,14 +81,78 @@ euler14 = maximum ([f x 1|x<-[992763]])
 
 
 -------------------------------------------------------------------------
-euler16=sum(tostr (2^1000))
+
+euler19 m n ans| n<2001=euler19 (p n) (n+1) ((countsun1 m n 1 0):ans)
+	       |otherwise=ans 
+	where p y=if (leap y) then (((m+367) `mod` 365) `mod` 7) else ((m+366 `mod` 365) `mod` 7)
 
 
+countsun x y n m|(n==1 || n==3 || n==5||n==7||n==8||n==10)= x:countsun ((x+3) `mod` 7) y (n+1) (l x m)
+		|(n==4||n==6||n==9||n==11)=x: countsun ((x+2) `mod` 7) y (n+1) (l x m)
+ 		|(n==2)=if (leap y) then (x:(countsun (p4 x) y (n+1) (l x m))) else (x:(countsun (p5 x) y (n+1) (l x m)))
+		|(n==12)= if (x==0) then [m+1] else [m]
+			where p1=(x+3)`mod` 7
+			      p2=(x+2) `mod` 7
+			      l x m=if(x==0) then (m+1) else m
+			      p4 m=((x+1) `mod` 7)
+			      p5 m=(x `mod` 7) 
+		
+			     
+leap y 	| ((y`mod` 4 ==0) && (y `mod` 100==0) && (y `mod` 400==0))=True
+        |((y`mod` 4 ==0) && (y `mod` 100==0))=False
+        |(y`mod` 4 ==0) =True
+        |otherwise=False
 
 
+countsun1 x y n m|(n==1 || n==3 || n==5||n==7||n==8||n==10)= countsun1 ((x+3) `mod` 7) y (n+1) (l x m) 
+                |(n==4||n==6||n==9||n==11)=countsun1 ((x+2) `mod` 7) y (n+1) (l x m)
+                |(n==2)=if (leap y) then ((countsun1 (p4 x) y (n+1) (l x m))) else ((countsun1 (p5 x) y (n+1) (l x m)))
+                |(n==12)= if (x==0) then m+1 else m
+                        where p1=(x+3)`mod` 7
+                              p2=(x+2) `mod` 7
+                              l x m=if(x==0) then (m+1) else m
+                              p4 m=((x+1) `mod` 7)
+                              p5 m=(x `mod` 7)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+fact n |n>0= n*fact(n-1)
+       |otherwise=1
+
+euler20=sum(tostr(fact 100))
+
+-----------------------------------------------------------------
+
+divisibles n m ans|m<ceiling(sqrt(fromIntegral n))=if(n `rem` m==0) then  divisibles n (m+1) (m:(n `div` m):ans) else divisibles n (m+1) ans
+		  |otherwise=sum(1:ans)
 
 
+findsum=[(divisibles x 2 [])|x<-[1..10000]]
+
+euler21a n ans|n<10001=if (n==(divisibles (p n) 2 []) && n/= p n) then euler21a (n+1) (n:ans) else euler21a (n+1) ans
+	      |otherwise=ans
+		where p a = (divisibles a 2 [])
+euler21 =sum(euler21a 1 [])
+------------------------------------------------------------------
+
+ablist n|n<28123= if((divisibles n 2 []) > n)then n:ablist(n+1) else ablist(n+1)
+	|otherwise=[]
+
+euler23a l=euler23 (ablist 1) (ablist 1) l
 
 
+euler23 [] [] l=l
+euler23 [] (y:ys) l= euler23 (ys) (ys) (nub l) 
+euler23 (x:xs) (y:ys) l=if((x+y)<28123) then euler23 xs (y:ys) ((x+y):l) else euler23 [] (y:ys) l
 
+-------------------------------------------------------------------------------
+fib25=1:1:[(x+y)|(x,y)<-zip (fib25)(tail fib25)]
+euler25 =length(takeWhile p fib25)+1
+	where p x =x<10**999
 
+-------------------------------------------------------------------------
+euler36=sum([x|x<-[1..1000000],isPali x,y x==reverse(y x)])
+	where y x=bin x
+
+bin x |x>0=(x `mod` 2):bin (x `div` 2)
+      |otherwise=[]
+	 
