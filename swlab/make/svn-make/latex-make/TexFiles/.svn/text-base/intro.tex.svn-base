@@ -1,0 +1,29 @@
+
+\section{Introduction}
+
+Current architectures and compilers continue to evolve
+bringing higher performance, lower power and smaller
+size while attempting to keep time to market as short as
+possible.\cite{Plug} Typical systems may now have multiple het-
+erogeneous reconfigurable cores and a great number of
+compiler optimizations available, making manual com-
+piler tuning increasingly infeasible. Furthermore, static
+compilers often fail to produce high-quality code due to
+a simplistic model of the underlying hardware.\\
+
+A key goal of the project is to make machine learning
+based compilation a realistic technology for general-
+purpose compilation. Current approaches 
+are highly preliminary limited to global compiler
+flags or simple transformations considered in isolation.
+GCC was selected as the compiler infrastructure for
+MILEPOST as it is currently the most stable and ro-
+bust open-source compiler.\cite{Qlogic} It supports multiple archi-
+tectures and has multiple aggressive optimizations mak-
+ing it a natural vehicle for our research. In addition,
+each new version usually features new transformations
+demonstrating the need for a system to automatically re-
+tune its optimization heuristics.
+
+
+

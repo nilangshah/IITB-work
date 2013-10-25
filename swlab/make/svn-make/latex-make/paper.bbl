@@ -1,0 +1,53 @@
+\begin{thebibliography}{10}
+
+\bibitem{CCCF}
+Continuous collective compilation framework.
+
+\bibitem{Plug}
+{Plugin project}.
+\newblock \url{http://libplugin.sourceforge.net}.
+
+\bibitem{Qlogic}
+{QLogic PathScale EKOPath Compilers}.
+\newblock \url{http://www.pathscale.com}.
+
+\bibitem{Auth09}
+Acovea, using natural selection to investigate software complexities.
+\newblock \url{http://www.coyotegulch.com/products/acovea}, 2009.
+
+\bibitem{ESTO}
+Esto: Expert system for tuning optimizations.
+\newblock January 2007.
+
+\bibitem{Mono08}
+Novel Author and Interesting Writer.
+\newblock {\em Experiences with Book Writing}.
+\newblock Random Mouse, Mumbai, 3 edition, 2008.
+
+\bibitem{my}
+E.~V. Bonilla, C.~K.~I. Williams, J.~Thomson F.~V.~Agakov, J.~Cavazos, and
+  M.~F.~P. O’Boyle.
+\newblock Predictive search distributions. in w. w. cohen and a. moore,
+  editors, proceedings of the 23rd international conference on machine
+  learning.
+\newblock \url{http://www.coyotegulch.com/products/acovea}, 2009.
+
+\bibitem{Midatasets}
+G.~Fursin, J.~Cavazos, and M.~O’Boyle.
+\newblock Midatasets: Creating the conditions for a more realistic evaluation
+  of iterative optimization.
+\newblock January 2007.
+
+\bibitem{Mibench}
+M.~R. Guthaus, J.~S. Ringenberg, D.~Ernst, T.~M. Austin, and T.~Mudge.
+\newblock {\em Mibench: A free, commercially representative embedded benchmark
+  suite. In IEEE 4th Annual Workshop on Workload Characterization}, December
+  2001.
+
+\bibitem{LCTES}
+P.~Kulkarni, W.~Zhao, H.~Moon, K.~Cho, and D.~Whalley.
+\newblock {\em M Finding effective optimization phase sequences. In Proc.
+  Languages, Compilers, and Tools for Embedded Systems (LCTES)}, page 12–23,
+  2003.
+
+\end{thebibliography}

@@ -1,0 +1,131 @@
+@Misc{Auth09,
+  author       = {},
+  title	       = {ACOVEA, Using Natural Selection to Investigate
+Software Complexities.},
+  journal      = {},
+  howpublished = {\url{http://www.coyotegulch.com/products/acovea}},
+  year	       = {2009},
+  volume       = {21},
+  pages	       = {10-28}
+}
+ 
+
+@Misc{my,
+  author       = {E. V. Bonilla and C. K. I. Williams and F. V. Agakov,
+J. Cavazos, J. Thomson and M. F. P. O’Boyle.},
+  title	       = {Predictive search distributions. In W. W. Cohen
+and A. Moore, editors, Proceedings of the 23rd
+International Conference on Machine learning},
+  journal      = {121–128},
+  howpublished = {\url{http://www.coyotegulch.com/products/acovea}},
+  year	       = {2009},
+  volume       = {21},
+  pages	       = {10-28},
+  address      ={New York, NY, USA,ACM}
+}
+  
+@Article{LCTES,
+ author = {P. Kulkarni and W. Zhao and H. Moon and K. Cho and
+D. Whalley.},
+ title = {},
+ booktitle = {},
+ year = {2003.},
+ journal={M Finding effective optimization phase
+sequences. In Proc. Languages, Compilers, and
+Tools for Embedded Systems (LCTES)},
+ isbn = {},
+ pages = {12–23},
+ location = {Seattle, Washington},
+ doi = {http://cccpf.sourceforge.net},
+ publisher = {},
+ address = {Austin, TX}
+ }
+
+@Article{Mibench,
+ author = {M. R. Guthaus and J. S. Ringenberg and D. Ernst and T. M.
+Austin and T. Mudge.},
+ title = {},
+ booktitle = {},
+ year = {December 2001},
+ journal={Mibench: A
+free, commercially representative embedded
+benchmark suite. In IEEE 4th Annual Workshop
+on Workload Characterization},
+ isbn = {},
+ pages = {},
+ location = {Seattle, Washington},
+ doi = {http://cccpf.sourceforge.net},
+ publisher = {},
+ address = {Austin, TX}
+}
+
+@Article{CCCF,
+ author = {},
+ title = {Continuous Collective Compilation Framework},
+ booktitle = {},
+ year = {},
+ isbn = {},
+ pages = {},
+ location = {Seattle, Washington},
+ doi = {http://cccpf.sourceforge.net},
+ publisher = {},
+ address = {}
+ }
+
+@Article{ESTO,
+ author = {},
+ title = {ESTO: Expert System for Tuning Optimizations},
+ booktitle = {},
+ year = {January 2007},
+ isbn = {},
+ pages = {},
+ location = {},
+ doi = {http://www.haifa.ibm.com/projects/systems/cot/esto/index.html},
+ publisher = {},
+ address = {}
+ }
+@Article{Midatasets,
+ author = {G. Fursin and J. Cavazos and M. O’Boyle},
+ title = {Midatasets: Creating the conditions for a more realistic evaluation of iterative optimization},
+ booktitle = { In Proceedings of the International Conference on High Performance Embedded Architectures & Compilers (HiPEAC 2007)},
+ year = {January 2007},
+ isbn = {},
+ pages = {},
+ location = {},
+ doi = {},
+ publisher = {},
+ address = {}
+ }
+
+@Book{Mono08,
+  author       = {Novel Author and Interesting Writer},
+  title	       = {Experiences with Book Writing},
+  publisher    = {Random Mouse},
+  year	       = 2008,
+  address      = {Mumbai},
+  edition      = 3
+}
+
+@Misc{Plug,
+  OPTkey =       {},
+  OPTauthor =    {Ronald rivest},
+  title =        {{Plugin project}},
+  howpublished = {\url{http://libplugin.sourceforge.net}},
+  OPTmonth =     {},
+  OPTyear =      {},
+  OPTnote =      {},
+  OPTannote =    {}
+}
+ 
+@Misc{Qlogic,
+  OPTkey =       {},
+  OPTauthor =    {},
+  title =        {{QLogic PathScale EKOPath Compilers}},
+  howpublished = {\url{http://www.pathscale.com}},
+  OPTmonth =     {},
+  OPTyear =      {},
+  OPTnote =      {},
+  OPTannote =    {}
+}
+
+
