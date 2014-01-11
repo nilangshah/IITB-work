@@ -1,0 +1,35 @@
+module Main where
+
+--import Language
+--import Gm.Utils
+--import Gm.Evaluator
+
+import Gcode
+
+--testProgram = "test arg1 arg2 = arg1 arg2"
+
+testProgram2 = "f = 3 ;\n\
+               \g x y = let z = x in z ;\n\
+               \h x = case (let y = x in y) of\n\
+                       \{ <1> -> 2 \n\
+                       \; <2> -> 5 \n\
+                       \}"
+
+-- parse and pretty-print
+--papp = putStrLn . either show (show . pretty) . parseCore
+
+-- parse and eval
+--pae = eval . make . parseCore
+--    where make = either (error . show) compile
+
+--trace = putStrLn . showResults . pae
+
+--run = putStrLn . showResult . pae
+main = do
+  input <- readFile "pfile"
+  let
+    p1= gencpgm (snd (head (prog input)))
+    --
+  print p1
+
+

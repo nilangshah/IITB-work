@@ -1,0 +1,46 @@
+module Language where
+
+data Exp a = V a              -- Variables
+           | I Int            -- Numbers
+	   | B Bool 
+           | EConstr Int Int     -- Constructor tag arity
+           | App (Exp a) (Exp a) -- Application
+           
+
+type CoreExp = Exp Name
+type Name = String
+type Alter a = (Int, [a], Exp a)
+type CoreAlt = Alter Name
+type Program a = [ScDef a]
+type CoreProgram = Program Name
+type ScDef a = (Name, [a], Exp a)
+type CoreScDef = ScDef Name
+
+bindersOf :: [(a,b)] -> [a]
+bindersOf = map fst
+
+rhsOf :: [(a,b)] -> [b]
+rhsOf = map snd
+
+isAtomicExp :: Exp a -> Bool
+isAtomicExp (V v) = True
+isAtomicExp (I n) = True
+isAtomicExp (B b) = True
+
+isAtomicExp _        = False
+
+preludeDefs :: CoreProgram
+preludeDefs =
+    [ ("I", ["x"], V "x"),
+      ("K", ["x","y"], V "x"),
+      ("K1",["x","y"], V "y"),
+      ("S", ["f","g","x"], App (App (V "f") (V "x"))
+                               (App (V "g") (V "x"))),
+      ("compose", ["f","g","x"], App (V "f")
+                                     (App (V "g") (V "x"))),
+      ("twice", ["f"], App (App (V "compose") (V "f"))
+                           (V "f")) ]
+
+extraPreludeDefs :: CoreProgram
+extraPreludeDefs =
+    [ ("False", [], EConstr 0 0), ("True", [], EConstr 1 0) ]

@@ -210,4 +210,9 @@ fundefCorrectExp par (Fname argname) | argname `elem` par = V argname
                                      | otherwise = Fname argname
 fundefCorrectExp _ x = x    
 
-
+main = do
+  input <- readFile "pfile"
+  let
+    program = parse input
+    --
+  print program
