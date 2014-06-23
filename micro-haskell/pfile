@@ -1,3 +1,0 @@
-foldl f id l = if null l then id else f (foldl f id (cdr l)) (car l)
-makelist = 
-zip l1 l2 = if null l1 then [[]] else makelist (makelist (car l1) (car l2)) (zip (cdr l1) (cdr l2))
